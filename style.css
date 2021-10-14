@@ -367,4 +367,7 @@ body {
   .layout-wrapper {
     display: none;
   }
+  .unavailable {
+    font-size: 11px;
+  }
 }
