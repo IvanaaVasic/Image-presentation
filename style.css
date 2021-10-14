@@ -1,0 +1,370 @@
+@font-face {
+  font-family: "Cairo-bold";
+  src: url("assets/Cairo-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cairo-light";
+  src: url("assets/Cairo-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cairo-regular";
+  src: url("assets/Cairo-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: auto;
+  width: 100%;
+  background-color: #eeeeee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  width: 80vw;
+  height: auto;
+}
+.heading {
+  width: 100%;
+  height: 150px;
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid #1a97db;
+}
+.header {
+  font-family: Cairo-bold;
+  font-size: 32px;
+  color: black;
+  opacity: 0.7;
+}
+.layout-wrapper {
+  width: 110px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding-left: 26.7px;
+  opacity: 0.7;
+}
+.grid,
+.list {
+  height: 32px;
+  cursor: pointer;
+}
+.grid-wrapper,
+.list-wrapper {
+  border: none;
+  background: transparent;
+}
+.main-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 50px 0px;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+  width: 46.49%;
+}
+.card {
+  cursor: pointer;
+  /* background-color: teal; */
+  background-image: url(img/loading-icegif-1.gif);
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-bottom: 20px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0px 10px 20px -5px rgb(29 30 34 / 75%);
+  border-radius: 10px;
+  overflow: hidden;
+  object-fit: cover;
+}
+.card-long {
+  height: 650px;
+}
+.card-short {
+  height: 500px;
+}
+.img-info {
+  height: 150px;
+  background-color: rgba(238, 238, 238, 0.7);
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  padding: 16px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* opacity: 0.7; */
+}
+.left-part {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 10px;
+}
+.img-decoration {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.num-container {
+  display: flex;
+  flex-direction: column;
+}
+.likes-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 10px;
+}
+.downloads-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 10px;
+}
+.avatar-user {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+.avatar-container {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 15px;
+  box-shadow: 0px 10px 20px -5px rgb(29 30 34 / 75%);
+}
+.avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.portfolio {
+  text-decoration: none;
+  font-family: Cairo-regular;
+  font-size: 14px;
+  color: black;
+  cursor: pointer;
+}
+.likes,
+.downloads {
+  font-family: Cairo-regular;
+  font-size: 14px;
+  color: black;
+}
+.num-likes,
+.num-downloads {
+  font-family: Cairo-bold;
+  font-size: 14px;
+  color: black;
+}
+.likes,
+.downloads {
+  margin-right: 10px;
+}
+.username {
+  font-family: Cairo-regular;
+  font-size: 14px;
+  color: black;
+  line-break: anywhere;
+}
+.right-part {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+.insta-wrapper,
+.twitter-wrapper,
+.portfolio-wrapper,
+.photo-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+.insta-wrapper,
+.portfolio-wrapper,
+.photo-wrapper {
+  margin-bottom: 5px;
+}
+.insta-logo,
+.portfolio-logo,
+.photo-logo {
+  width: 20px;
+  height: 20px;
+  margin-right: 15px;
+}
+.twitter-logo {
+  margin-right: 15px;
+}
+.instagram,
+.twitter,
+.portfolio,
+.photo {
+  font-family: Cairo-regular;
+  font-size: 14px;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+  line-break: anywhere;
+}
+.unavailable {
+  font-family: Cairo-regular;
+  font-size: 14px;
+  color: black;
+  opacity: 0.7;
+  cursor: auto;
+  text-decoration: none;
+}
+.unavailable:hover {
+  text-decoration: none;
+}
+.instagram:hover,
+.twitter:hover,
+.portfolio:hover,
+.photo:hover {
+  text-decoration: underline;
+}
+.overlay {
+  opacity: 0.9;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: #222;
+  z-index: 2;
+}
+
+.overlay__inner {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.overlay__content {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.spinner {
+  width: 75px;
+  height: 75px;
+  display: inline-block;
+  border-width: 2px;
+  border-color: rgba(255, 255, 255, 0.05);
+  border-top-color: #fff;
+  animation: spin 1s infinite linear;
+  border-radius: 100%;
+  border-style: solid;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#lightbox {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+
+#lightbox.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  padding: 4px;
+  background-color: black;
+}
+@media only screen and (max-width: 980px) {
+  .container {
+    width: 95vw;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .container {
+    width: 95vw;
+  }
+  .instagram,
+  .twitter,
+  .portfolio,
+  .photo {
+    font-size: 11px;
+  }
+  .num-likes,
+  .num-downloads {
+    font-size: 11px;
+  }
+  .likes,
+  .downloads {
+    font-size: 11px;
+  }
+  .card-long {
+    height: 520px;
+  }
+  .card-short {
+    height: 425px;
+  }
+  .insta-logo,
+  .portfolio-logo,
+  .photo-logo,
+  .twitter-logo {
+    width: 15px;
+    height: 15px;
+    margin-right: 15px;
+  }
+  .avatar-container {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0px;
+  }
+  .column {
+    width: 100%;
+  }
+  .card-short {
+    height: 600px;
+  }
+  .layout-wrapper {
+    display: none;
+  }
+}
