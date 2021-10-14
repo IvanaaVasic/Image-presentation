@@ -5,7 +5,6 @@ fetch("https://api.unsplash.com/photos/?client_id=2p21d3By0CooQeMKJfzZixV_7C-alK
     return response.json();
   })
   .then((images) => {
-    console.log(images);
     document.querySelector(".overlay").style.display = "none";
 
     for (let i = 0; i < images.length; i++) {
