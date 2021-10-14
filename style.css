@@ -112,7 +112,6 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  /* opacity: 0.7; */
 }
 .left-part {
   display: flex;
@@ -369,5 +368,8 @@ body {
   }
   .unavailable {
     font-size: 11px;
+  }
+  .img-info {
+    padding: 16px 8px;
   }
 }
