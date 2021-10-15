@@ -1,6 +1,6 @@
 const mainContent = document.querySelector(".main-content");
 
-fetch("https://api.unsplash.com/photos/?client_id=2p21d3By0CooQeMKJfzZixV_7C-alKOdI60AQBdR1hQ")
+fetch("https://api.unsplash.com/photos/random?client_id=2p21d3By0CooQeMKJfzZixV_7C-alKOdI60AQBdR1hQ&count=26")
   .then((response) => {
     return response.json();
   })
@@ -121,7 +121,7 @@ function generateInfoContent(imageData, infoContainer) {
       </div>
       <div class="downloads-wrapper">
         <p class="downloads">Downloads:</p>
-        <p class="num-downloads">${imageData.user.total_collections}</p>
+        <p class="num-downloads">${imageData.downloads}</p>
       </div>
     </div>
     <div class="avatar-user">
