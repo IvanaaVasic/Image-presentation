@@ -1,6 +1,6 @@
 # Image-presentation
 
-Image cards with information from unsplash API and lazy load
+Image cards with information from unsplash API, lazy load and list and grid view
 
 ## Link to this project
 
